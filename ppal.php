@@ -1,0 +1,68 @@
+<?php
+session_start();
+
+include("util.php");
+if ($_SESSION["sesion"] != "TRUE" || $_SESSION["nivel"] != 1) {
+	js_redireccion("index.php");
+	exit; 
+}
+
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Documento sin t&iacute;tulo</title>
+<style>
+<!--
+a:link {
+	color: #DA251D;
+	text-decoration:none;
+}
+a:visited {
+	color: #DA251D;
+	text-decoration:none;
+}
+a:hover {
+	color: #DA251D;
+	text-decoration:none;
+}
+a:active {
+	color: #DA251D;
+	text-decoration:none;
+}
+
+-->
+</style>
+</head>
+
+<body>
+
+<table width="650" height="434" border="1" align="center">
+  <tr>
+    <td width="222" rowspan="2" align="center">
+	<img src="imagenes/gobernacion.png" width="130" height="80" />
+	<img src="imagenes/topfestival.png" width="213" height="225" />
+	<img src="imagenes/cortulara.jpg" />
+    </td>
+    <td height="390" colspan="2" align="center">
+        <font color="#CD3232" size="4" face="Arial, Helvetica, sans-serif">Sistema de Pre-venta<br />
+Boleter&iacute;a-Abonos</font><br /><br />
+        <form method="post" action="datos.php">
+			<font size="2" face="Arial, Helvetica, sans-serif"><strong>Introduzca la C&eacute;dula:</strong></font><br><br>
+			<input type="text" name="cedula" maxlength="8"><br><br>
+			<input type="submit" name="enviar" value="Enviar">
+	  </form>	</td>
+  </tr>
+  <tr>
+    <td width="203" align="center"><font color="#CD3232" size="2" face="Arial, Helvetica, sans-serif"><a href="./password.php">Cambiar Password</a></font></td>
+    <td width="203" align="center"><font color="#CD3232" size="2" face="Arial, Helvetica, sans-serif"><a target="_blank" href="./rep_ven.php">Ventas del dia</a></font></td>
+  </tr>
+  <!---tr>
+    <td>&nbsp;</td>
+    <td width="279"><div align="right"><img src="Imagenes/logos.gif"></div></td>
+    <td width="196"><div align="center"><img src="Imagenes/fabiolaI.gif"></div></td>
+  </tr--->
+</table>
+</body>
+</html>
